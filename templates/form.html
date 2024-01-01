@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>本を登録してね</h1>
+    <form method="post" action="{{url_for('register')}}">
+        <table border="1">
+            <tr>
+                <th>入荷予定日</th>
+                <th>タイトル</th>
+                <th>金額</th>
+            </tr>
+                <tr>
+                <td><input type="text" name="arrival_day"></td>
+                <td><input type="text" name="title"></td>
+                <td><input type="text" name="price"></td>
+                </tr>
+        </table>
+        <br>
+        <input type="submit" value="登録">
+    </form> 
+<a href="{{url_for('form')}}">編集</a>
+<a href="{{url_for('index')}}">ホーム</a>
+</body>
+</html>
