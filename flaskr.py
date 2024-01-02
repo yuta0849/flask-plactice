@@ -8,9 +8,6 @@ from .db import books, Session
 
 DATABASE = 'mysql+pymysql://yuta_suzuki:chihayaSHOGO118!@localhost/books?charset=utf8'
 engine = create_engine(DATABASE, echo=True)
-# metadata = MetaData(bind=engine)
-# Session = sessionmaker(bind=engine)
-# books = Table('books', metadata, autoload=True, autoload_with=engine)
 
 @app.route('/')
 def index():
